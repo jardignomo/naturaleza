@@ -1,0 +1,359 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fce0cf; /* Color de fondo */
+  color: #2e2e2e; /* Color de texto general */
+}
+
+/* Encabezado fijo */
+.header-container {
+  background-color: #1f3a52; /* Color de la cabecera */
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: top 0.3s ease-in-out;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  flex-grow: 1;
+}
+
+.logo img {
+  height: 50px;
+}
+
+/* Menú */
+nav {
+  position: relative;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  display: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fce0cf; /* Color del texto en el menú */
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Botón de menú */
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #fce0cf; /* Color del ícono del botón */
+  cursor: pointer;
+  display: block;
+  margin-right: 28px; /* Ajusta el margen derecho para moverlo a la izquierda */
+}
+
+/* Mostrar menú activo con desplazamiento */
+.menu.show {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.menu.show li {
+  display: block;
+}
+
+.menu.show a {
+  color: #1f3a52;
+  padding: 10px;
+  display: block;
+}
+
+/* Secciones */
+.section {
+  padding: 100px 20px;
+  text-align: center;
+}
+/* Sección Introducción */
+.intro {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.intro h1 {
+  font-family: "League Gothic", sans-serif;
+  font-size: 48px;
+  text-transform: uppercase;
+  color: #1f3a52;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Carrusel */
+/* Carrusel con ancho ajustado */
+.carousel-container {
+  width: 100%;
+  max-width: 900px; /* Ajusta esto si necesitas otro tamaño */
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  background: #f5d5c0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Contenedor de imágenes ajustado */
+.carousel-inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-inner img {
+  width: 100%; /* Ocupará todo el ancho */
+  height: 100%; /* Ocupará todo el alto */
+  object-fit: cover; /* Ajuste para llenar el contenedor sin deformarse */
+  border-radius: 10px;
+  display: none;
+  cursor: pointer;
+}
+
+.carousel-inner img.active {
+  display: block;
+}
+
+/* Estilización de los botones de navegación */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.6);
+  color: #333;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 12px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev {
+  left: 15px;
+}
+
+.next {
+  right: 15px;
+}
+
+/* Pantalla completa al hacer clic */
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.fullscreen img {
+  width: auto;
+  max-width: 90%;
+  height: auto;
+  max-height: 90%;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+/* Sección Inspiración Tipográfica */
+.inspiration {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+h2 {
+  font-family: "League Gothic", sans-serif;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #1f3a52;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-family: "League Gothic", sans-serif;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #2874a6;
+  margin-bottom: 15px;
+}
+
+/* Cartas */
+/* Contenedor de cartas */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: stretch; /* Todas las tarjetas tendrán la misma altura */
+}
+
+/* Cartas */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Permite que el contenido se distribuya verticalmente */
+  justify-content: space-between;
+}
+
+.card h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #1f3a52;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Información Adicional */
+
+/* Contenedor principal de la sección Más Información */
+.info-container {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 5px solid #386d57;
+}
+
+/* Sección de información */
+.more-info {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Título principal (H2) */
+.more-info h2 {
+  font-size: 30px;
+  font-family: "League Gothic", sans-serif;
+  font-weight: bold;
+  color: #1f3a52; /* Color corregido según tu indicación */
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+/* Subtítulos (H3) */
+.more-info h3 {
+  font-size: 30px; /* Tamaño corregido */
+  font-family: "League Gothic", sans-serif;
+  font-weight: bold;
+  color: #386d57; /* Color corregido según tu indicación */
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+/* Texto principal (Body) */
+.more-info p {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color: #2e2e2e;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+/* Listas alineadas a la izquierda */
+.more-info ul li {
+  text-align: left;
+  margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+  line-height: 1.6;
+}
+
+/* Notas o detalles (Caption) */
+.more-info .caption {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  color: #2e2e2e;
+  margin-top: 10px;
+}
+
+.info-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.info-image img {
+  max-width: 200%; /* Ajusta el tamaño de la imagen */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-image figcaption {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: #1f3a52;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 14px;
+}
