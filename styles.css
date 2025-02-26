@@ -357,3 +357,127 @@ footer {
   margin-top: 20px;
   font-size: 14px;
 }
+
+/* 📱 Estilos para móviles (menos de 600px) */
+@media (max-width: 600px) {
+  /* Ajustes del header */
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #003366;
+    width: 100%;
+    position: relative; /* Se mantiene en su posición original */
+    z-index: 1000;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  /* Menú */
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    display: none;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu-btn {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+  }
+
+  .menu a {
+    padding: 12px;
+    width: 100%;
+    color: #003366;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* Ajuste del contenido principal */
+  .main-content {
+    margin-top: 20px;
+  }
+
+  /* Imagen (info-image) */
+  .info-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 500px; /* Evita que se haga demasiado grande en pantallas grandes */
+    margin: 0 auto;
+  }
+
+  /* Carrusel */
+  .carousel-container {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .carousel-btn {
+    font-size: 18px;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .carousel-btn.left {
+    left: 5px;
+  }
+
+  .carousel-btn.right {
+    right: 5px;
+  }
+
+  /* Cartas */
+  .card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px auto;
+    width: 90%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  /* Footer */
+  .footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  /* Zoom y escalado */
+  body {
+    max-width: 100%;
+    overflow-x: hidden; /* Evita desplazamiento horizontal */
+  }
+
+  html {
+    touch-action: manipulation; /* Mejora la navegación táctil */
+  }
+}
