@@ -376,11 +376,12 @@ footer {
     height: 40px;
   }
 
+  /* Contenedor del menú */
   /* Menú */
-  .menu {
+  .menú {
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 50px;
+    right: 0;
     width: 100%;
     background: white;
     flex-direction: column;
@@ -388,30 +389,28 @@ footer {
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 100;
-    display: none;
+    display: none; /* Oculto por defecto */
   }
 
-  .menu.show {
+  .menú.mostrar {
     display: flex;
   }
 
-  .menu-btn {
+  .menú-btn {
     font-size: 24px;
     cursor: pointer;
     color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-left: auto;
   }
-
-  .menu a {
-    padding: 12px;
+  .menú a {
+    padding: 10px;
     width: 100%;
     color: #003366;
     text-decoration: none;
     border-bottom: 1px solid #ddd;
-  }
-
-  /* Ajuste del contenido principal */
-  .main-content {
-    margin-top: 20px;
   }
 
   /* Imagen (info-image) */
